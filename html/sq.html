@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="../css/header.css">
+  <link rel="stylesheet" href="../css/footer.css">
+  <link rel="stylesheet" href="../css/jquery.exzoom.css">
+  <style>
+  .xq{height: 1000px;background-color: #fff;}
+  .sq{padding-top: 30px;margin-left: 50px;height: 800px;background-color: #fff;}
+  .sq img{width: 258px;height: 340px;float: left;}
+  .sq h3{margin-left: 360px;margin-top: 20px;}
+  .sq p{margin-left: 360px;margin-top: 30px;font-size: 16px;color: #4a4a4a;}
+  .sq dl{margin-left: 360px;margin-top: 50px;font-size: 16px;}
+  .buy{width: 120px;height: 50px;color: #ff1232}
+  .sq.pj{color: #ff1232;}
+  .sq .piaoj{color: #ff1232}
+  /* #exzoom { width: 300px;height: 340px;float: left;}
+  .exzoom_img_ul{width: 300px;height: 340px;float: left;}
+  .exzoom_img_ul li{background-color: #fff;border:0;} */
+  /* .tr{height:350px;border-bottom: 1px solid  #eaeaea34}
+		.tr img{float: left;width: 258px;height: 340px;float: left;}
+		.tr p{height: 50px;line-height: 50px;float: left;width: 900px;margin-top: 10px;margin-left: 10px;}
+		.tr span{height: 50px;line-height: 50px;width: 900px;} */
+  </style>
+</head>
+<body>
+  <div class="a">
+		<div class="header w1200 cl">
+        <a href="xm.html">	<img src="../images/logo.png" alt=""></a>
+			<i><img src="../images/db.png" alt=""></i>
+			<ul>
+				<li id="qg">全国	<div class="dzh">
+					<div class="qguo">当前城市：       全国</div>
+					<p class="rm">热门城市: &nbsp;&nbsp;&nbsp;全国 &nbsp;&nbsp;北京&nbsp;&nbsp; 上海&nbsp;&nbsp; 深圳 &nbsp;&nbsp;广州&nbsp;&nbsp; 杭州 &nbsp;&nbsp;天津&nbsp;&nbsp; 重庆&nbsp;&nbsp; 成都 &nbsp;&nbsp;香港</p>
+					<p>其他城市: &nbsp;&nbsp;&nbsp;上海 &nbsp;&nbsp;北京 &nbsp;&nbsp;深圳 &nbsp;&nbsp;武汉 &nbsp;&nbsp;杭州 &nbsp;&nbsp;成都 &nbsp;&nbsp;天津 &nbsp;&nbsp;广州 &nbsp;&nbsp;重庆 &nbsp;&nbsp;西安</p>
+					<ul>南京 &nbsp;&nbsp;苏州 &nbsp;&nbsp;宁波 &nbsp;&nbsp;贵阳 &nbsp;&nbsp;青岛 &nbsp;&nbsp;长沙 &nbsp;&nbsp;合肥 &nbsp;&nbsp;厦门 &nbsp;&nbsp;昆明 &nbsp;&nbsp;郑州 <br></ul>
+					<ul>济南 &nbsp;&nbsp;香港 &nbsp;&nbsp;石家庄 &nbsp;&nbsp;太原 &nbsp;&nbsp;福州 &nbsp;&nbsp;南宁 &nbsp;&nbsp;无锡 &nbsp;&nbsp;南昌 &nbsp;&nbsp;哈尔滨 &nbsp;&nbsp;宜昌<br></ul>
+					<ul>绍兴 &nbsp;&nbsp;大连 &nbsp;&nbsp;佛山 &nbsp;&nbsp;珠海 &nbsp;&nbsp;长春 &nbsp;&nbsp;潍坊 &nbsp;&nbsp;沈阳 &nbsp;&nbsp;常州 &nbsp;&nbsp;包头 &nbsp;&nbsp;呼和浩特<br></ul>
+					<ul>安庆 &nbsp;&nbsp;桂林 &nbsp;&nbsp;丽水 &nbsp;&nbsp;马鞍山 &nbsp;&nbsp;泉州 &nbsp;&nbsp;宜春 &nbsp;&nbsp;黄冈 &nbsp;&nbsp;廊坊 &nbsp;&nbsp;扬州 &nbsp;&nbsp;柳州<br></ul>
+					<ul>安顺 &nbsp;&nbsp;昌吉 &nbsp;&nbsp;长治 &nbsp;&nbsp;滁州 &nbsp;&nbsp;鄂尔多斯 &nbsp;&nbsp;邯郸 &nbsp;&nbsp;红河 &nbsp;&nbsp;湖州 &nbsp;&nbsp;济宁<br></ul>
+					<ul>汕头 &nbsp;&nbsp;上饶 &nbsp;&nbsp;韶关 &nbsp;&nbsp;泰安 &nbsp;&nbsp;泰州 &nbsp;&nbsp;乌海 &nbsp;&nbsp;乌鲁木齐 &nbsp;&nbsp;咸阳 &nbsp;&nbsp;湘潭<br></ul>
+					<ul>盐城 &nbsp;&nbsp;云浮 &nbsp;&nbsp;张家口</ul>
+				</div></li>
+				<li id="shy">首页</li>
+				<li id="fl">分类</li>
+			</ul>
+			<div id="ss">
+				<i id="fdj"><img src="../images/fdj.png" alt=""></i>
+				<input type="text" placeholder="搜索明星.演出.体育赛事" id="inp">
+				<dd id="sous">
+					<p>搜索</p>
+				</dd>
+			</div>
+			<ul class="dl">
+				<a href="dl.html" style="color:rgb(2, 2, 2)"><li id="dl"><img src="../images/dl.png" alt="">登录</li></a>
+				<li id="xz"><img src="../images/xz.png" alt="">下载</li>
+				<li id="en"><img src="../images/en.png" alt="">English</li>
+			</ul>
+		</div>
+  </div>
+  
+  <div  class="xq w1200 cl">
+    <div id="content" class="sq">
+      <!-- <div class="exzoom" id="exzoom">
+		    <div class="exzoom_img_box">
+		        <ul class="exzoom_img_ul">
+		            <li><img src="../images/cqz.jpg"/></li>
+		        </ul>
+		    </div>
+    </div> -->
+
+      <!-- <img src="../images/cqz.jpg" alt="">
+      <h3>2019陈绮贞20周年－「漫漫长夜 Cheer 20」北京演唱会</h3>
+      <p>时间:2019-06-22</p>
+      <p>场馆：凯迪拉克</p>
+      <dl>选择时间 2019-06-22</dl>
+      <p class="pj">选择票价 399</p> -->
+    </div>
+  </div>
+  <!-- <div id="content"></div> -->
+
+
+  <div class="d">
+    <div class="footer w1200 cl">
+      <ul class="gg">
+        <li>帮助中心</li>
+        <li>|</li>
+        <li>公司介绍</li>
+        <li>|</li>
+        <li >品牌识别</li>
+        <li>|</li>
+        <li>公司大事记</li>
+        <li>|</li>
+        <li>协议及隐私权政策</li>
+        <li>|</li>
+        <li >廉正举报</li>
+        <li>|</li>
+        <li>联系合作</li>
+        <li>|</li>
+        <li>招聘信息</li>
+        <li>|</li>
+        <li>防骗秘籍</li>
+      </ul>
+      <div class="dase">
+        <div class="dm"><img src="../images/dm.png" height="60" width="170" alt=""></div>
+        <dl class="app"><img src="../images/app.png " height="88" width="88" alt="">
+        <div class="xz">APP下载</div>
+        </dl>
+      </div>
+      <div class="side">
+        <div class="zx">
+        <div class="kef">在线客服</div>
+        </div>
+        <ul class="gs">
+          <li>京ICP证031057号</li>
+          <li>|</li>
+          <li>京ICP备11043884号</li>
+          <li>|</li>
+          <li>京公网安备11010102000430号</li>
+          <li>|</li>
+          <li>广播电视节目制作经营许可证
+            (京)字第02253号</li>
+          <li>网络文化经营许可证
+            京网文[2016]3438-413号</li>
+          <li>|</li>
+          <li>营业性演出许可证
+            京市演587号</li>
+          <li>北京红马传媒文化发展有限公司 版权所有
+            大麦网Copyright 2003-2018 All Rights Reserved
+          </li>
+        </ul>
+        <img src="../images/v.gif"  height="30" width="120" alt="">
+        <img src="../images/zz.png"  height="30" width="120" alt="">
+        <img src="../images/pc.png"  height="30" width="49" alt="">
+        <img src="../images/wx.png"  height="40" width="114" alt="">
+        <img src="../images/cx.png"  height="30" width="85" alt="">
+      </div>
+    </div>
+  </div>
+</body>
+<script src="../js/ajax.js"></script>
+<script src="../js/cookie.js"></script>
+<script src="../jq/jquery-1.11.0.min.js"></script>
+<script src="../jq/jquery.exzoom.js"></script>
+<script>
+  //  $("#exzoom").exzoom({
+	//         autoPlay: false,
+  //     });
+
+  var dlDiv = document.getElementById("dl");
+    var loginName = getCookie("loginName");
+    if (loginName) {
+        dlDiv.innerHTML = `<span>${loginName}</span><div onclick="userExist()">退出</div>`;
+    } else {
+        dlDiv.innerHTML = `<img src="../images/dl.png" alt="">登录`;
+    }
+	function userExist() {
+        setCookie("loginName", "", -7);
+        setCookie("loginId", "", -7);
+        gotoLogin();
+    }
+
+    function gotoLogin() {
+        setCookie("backUrl", window.location.href, 7);
+        window.location.href = "dl.html";
+    }
+      
+	var content = document.getElementById("content");
+	 $.ajax({
+	        type: "get",
+          url: "../php/goodslist.php", //java aspx  asp py
+          data: {
+            goodsname: getCookie("goodsname"),
+        },
+	        dataType: "json",
+	        success: function (list) { //list是一个集合
+	            var html = "";
+              list.forEach (function (item) {
+	                var {
+	                    id,
+	                    goodsname,
+	                    goodsimg,
+	                    goodsnum,
+                      goodsprice,
+                      date
+	                } = item;
+	                html =
+	                    ` <div class="sq">
+	                            <img src="${goodsimg}">
+	                            <h3>${goodsname}
+                              </h3>
+                              <p>时间:${date}</p>
+                                <p>场馆:${goodsnum}</p>
+                                <dl>选择时间：${date} </dl>
+                                <p class="piaoj">票价${goodsprice}</p>
+                                 <p> <span class='buy' onclick="gotomyshoppingcar('${id}')">立即购买</span>
+                                  
+	                            </p>
+	                         </div>`;
+	            });
+	            content.innerHTML = html;
+
+	        },
+	        error: function (info) {
+	            console.log(info);
+	        }
+		});
+
+
+ function gotomyshoppingcar(goodsid) {
+        // alert(goodsid); //session
+        //加入购物车 判断用户是否登录
+        var loginId = getCookie("loginId"); //获取用户登录的编号
+        if (loginId) {
+            //加入购物车的代码
+            //人买商品  如果买过了(查询) 就更新数量(更新)  没有买过新增一条(新增)
+            $.ajax({
+                type: "get",
+                url: "../php/gotomyshoppincar.php",
+                data: {
+                    userid: loginId,
+                    goodsid: goodsid,
+                    num: 1
+                },
+                dataType: "json",
+                success: function (obj) {
+                    if (obj["code"] == 1) {
+                        //加入成功
+                        if (confirm("加入成功 是否立即结算")) {
+                            window.location.href = "myshoppingcarlist.html";
+                        } else {
+                            showNum();
+                        }
+
+                    } else {
+                        alert(obj["msg"]);
+                    }
+
+                }
+
+            });
+
+        } else {
+            //返回登录页面
+            gotoLogin();
+        }
+
+    }
+
+    function gotoLogin() {
+        setCookie("backUrl", window.location.href, 7);
+        window.location.href = "dl.html";
+        // window.location.href = "login.html?backurl="+window.location.href;
+    }
+
+    function userExist() {
+        setCookie("loginId", "", -1);
+        setCookie("loginName", "", -1);
+        gotoLogin();
+    }
+
+    function showNum() {
+        $.ajax({
+            type: "get",
+            url: "../php/getusergoodsnum.php",
+            data: {
+                loginId: loginId
+            },
+            dataType: "json",
+            success: function (obj) {
+                if (obj["sum"] >= 1) {
+                    shoppingInfoDiv.innerHTML = `<a href="myshoppingcarlist.html">${obj["sum"]}</a>`;
+                } else {
+                    shoppingInfoDiv.innerHTML = `<a>空空如也</a>`;
+                }
+                shoppingInfoDiv.style.display = "block";
+            }
+        });
+	}
+</script>
+</html>

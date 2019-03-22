@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="../css/header.css">
+	<link rel="stylesheet" href="../css/lbt.css">
+	<link rel="stylesheet" href="../css/ych.css">
+	<link rel="stylesheet" href="../css/fy.css">
+	<link rel="stylesheet" href="../css/footer.css">
+	<!-- <script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script> -->
+	<title>Document</title>
+	<style>
+		body,h1,h2,h3,h4,h5,h6,p,ul,ol,dd,table,input,textarea{padding: 0;margin: 0;}
+		img{vertical-align: top;border: 0;}
+		a{text-decoration: none;}
+		li{list-style: none;}
+		input:focus,textarea:focus,select:focus{outline: none;}
+		textarea{resize:none;}
+		.w1170{width: 1170px;margin: auto;}
+		.cl:after{content: "";display: block;clear: both;height: 0;overflow: hidden;visibility: hidden;}
+		.cl{zoom: 1;}
+		body{background-color: #f3f3f3;}
+		.w1200{width: 1200px;margin: auto;}
+		/* .a{width: 100%;height: 70px;}
+		.header img{float: left;width: 92px;height: 46px;margin-top: 10px;}
+		.header i img{float: left;margin-left: 50px;width: 12px;height: 13px;margin-top: 26px;}
+		#qg{margin-top: 22px;float: left;}
+		#shy{float: left;margin-top: 22px;margin-left: 40px;color: red;}
+		#fl{float: left;margin-top: 22px;margin-left: 40px;}
+		#ss{float: left;width: 319px;height: 46px;margin-left: 200px;margin-top: 10px;border: 1px solid #d66363;border-radius: 20px;background-color:#fff;}
+		#fdj{margin-top: 5px;float: left;margin-left: 10px;margin-right: 10px;}
+		#fdj img{width: 17px;height: 18px;margin-left: 0;margin-top: 10px;}
+		#inp{float: left;width: 200px;height: 46px;float: left;border:none}
+		#sous{float: right;width: 82px;height: 48px;background-color:rgba(248, 73, 73, 0.884);border-top-right-radius:20px;border-bottom-right-radius:20px;}
+		#sous p{line-height: 48px;text-align: center;color: aliceblue;}
+		.dl{float: left;margin-left: 60px;}
+		.dl img{width: 26px;height: 26px;margin-top: 23px;}
+		.dl li{float: left;margin-left: 30px;line-height: 70px;}头部   */
+		.b{width: 100%;height: 320px;z-index: 1;}
+		/* .c{width: 100%;height: 500px;}
+		.ych{border: 1px solid rgba(175, 171, 171, 0.226);margin-top: 20px;}
+		.ych dl{height: 40px;}
+		.ych h4{line-height: 40px;float: left;margin-left: 20px;color: rgb(39, 38, 38);font-size: 25px;}
+		.ych .ck{float: right;line-height: 40px;margin-right: 20px;font-size: 15px;color: #979797;}
+		#xa{float: left;margin:0 20px 20px;width: 260px;height: 340px;position:relative;}
+		.ych .tmk{width: 258px;height: 110px;position: absolute;bottom: 0;left: 0;background-color: rgba(0, 0, 0, .5)}
+		.ych .tmk .ju{width: 258px;height: 60px;position: absolute;left: 10px;top: 20px;color: #fff}
+		.ych .tmk .mn{width: 258px;height: 50px;position: absolute;left: 10px;bottom: 0;color: #fff;font-size: 20px;}
+		.ych .tmk .ju:hover,.ych .tmk .mn:hover{color: #FF1268;}
+		.ych .mp li{height: 160px;width: 280px;float: left;margin-right: 20px;margin-bottom: 20px;}
+		.ych ul  li img{width: 110px;height: 160px;}
+		.ych ul  li .img{width: 110px;height: 160px;overflow: hidden;position: relative;display: inline-block;}
+		.ych .mp .info{width: 155px;height: 160px;position: relative;padding-left: 15px;vertical-align: top;float: right;}
+		.ych .bt{line-height: 20px;font-size: 14px;color: #4A4A4A;overflow: hidden;display: -webkit-box;-webkit-box-orient: vertical;-webkit-line-clamp: 2}
+		.ych .dz,.rq{font-size:12px;color: #9B9B9B;margin-top: 10px;}
+		.ych .jg{font-size: 16px;color: #FF1268;margin-top: 50px;}
+		.ych .bt:hover,.dz:hover,.rq:hover{color: #FF1268} */
+		/* .d{width: 100%;}
+		.footer ul{margin-left: 120px;margin-bottom: 20px;}
+		.footer .gg li{font-size: 15px;margin-left: 20px;float: left;}
+		.footer li:hover{color: #ff1268;}
+		.footer .dase{float: left;margin-top: 20px;height: 180px;width: 450px;}
+		.footer .dm{width: 200px;height:100px;margin-right: 20px;margin-top: 20px;float: left;}
+		.footer .app{margin-left: 20px;width: 150px;height: 200px;float: left;}
+		.footer .xz{margin-left: 15px;}
+		.footer .side{float: left;margin-top: 20px;width: 750px;}
+		.footer .zx{width: 750px;height: 30px;}
+		.footer .kef{ float: left;width: 98px;height: 27px; line-height: 27px;text-align: center;background-color: #ff1268;color: #fff;font-size: 14px;border-radius: 20px;margin-bottom: 10px;}
+		.footer  .side .gs{float: left;width: 750px;height: 80px;margin: 0;}
+		.footer li{float: left;font-size: 13px;margin-right: 5px;} */
+		/* #dl{float: left;width: 105px;height: 80px;margin: 0;}
+		#dl span{width: 40px;height: 80px;float: left;}
+		#dl div{width: 40px;height: 80px;float: right;}
+		#dl div:hover{color:  #ff1268}
+		#qg{display: block;position: relative;}
+		.dzh{width: 700px;height: 500px;background-color: #fff;display: none;position: absolute;top: 20px;left: -120px;z-index: 2;}
+		#qg:hover .dzh{display: block;}
+		.qguo{height: 40px;margin-top: 20px;margin-left: 20px;}
+		.dzh p{height: 30px;margin-top: 10px;margin-left: 20px;}
+		.dzh ul{margin-left: 108px;height: 30px;margin-top: 10px;} */
+		.ck:hover{color:#ff1268;}
+	</style>
+</head>
+
+<body>
+	<div class="a">
+		<div class="header w1200 cl">
+			<img src="../images/logo.png" alt="">
+			<i><img src="../images/db.png" alt=""></i>
+			<ul>
+				<li id="qg">全国	<div class="dzh">
+					<div class="qguo">当前城市：       全国</div>
+					<p class="rm">热门城市: &nbsp;&nbsp;&nbsp;全国 &nbsp;&nbsp;北京&nbsp;&nbsp; 上海&nbsp;&nbsp; 深圳 &nbsp;&nbsp;广州&nbsp;&nbsp; 杭州 &nbsp;&nbsp;天津&nbsp;&nbsp; 重庆&nbsp;&nbsp; 成都 &nbsp;&nbsp;香港</p>
+					<p>其他城市: &nbsp;&nbsp;&nbsp;上海 &nbsp;&nbsp;北京 &nbsp;&nbsp;深圳 &nbsp;&nbsp;武汉 &nbsp;&nbsp;杭州 &nbsp;&nbsp;成都 &nbsp;&nbsp;天津 &nbsp;&nbsp;广州 &nbsp;&nbsp;重庆 &nbsp;&nbsp;西安</p>
+					<ul>南京 &nbsp;&nbsp;苏州 &nbsp;&nbsp;宁波 &nbsp;&nbsp;贵阳 &nbsp;&nbsp;青岛 &nbsp;&nbsp;长沙 &nbsp;&nbsp;合肥 &nbsp;&nbsp;厦门 &nbsp;&nbsp;昆明 &nbsp;&nbsp;郑州 <br></ul>
+					<ul>济南 &nbsp;&nbsp;香港 &nbsp;&nbsp;石家庄 &nbsp;&nbsp;太原 &nbsp;&nbsp;福州 &nbsp;&nbsp;南宁 &nbsp;&nbsp;无锡 &nbsp;&nbsp;南昌 &nbsp;&nbsp;哈尔滨 &nbsp;&nbsp;宜昌<br></ul>
+					<ul>绍兴 &nbsp;&nbsp;大连 &nbsp;&nbsp;佛山 &nbsp;&nbsp;珠海 &nbsp;&nbsp;长春 &nbsp;&nbsp;潍坊 &nbsp;&nbsp;沈阳 &nbsp;&nbsp;常州 &nbsp;&nbsp;包头 &nbsp;&nbsp;呼和浩特<br></ul>
+					<ul>安庆 &nbsp;&nbsp;桂林 &nbsp;&nbsp;丽水 &nbsp;&nbsp;马鞍山 &nbsp;&nbsp;泉州 &nbsp;&nbsp;宜春 &nbsp;&nbsp;黄冈 &nbsp;&nbsp;廊坊 &nbsp;&nbsp;扬州 &nbsp;&nbsp;柳州<br></ul>
+					<ul>安顺 &nbsp;&nbsp;昌吉 &nbsp;&nbsp;长治 &nbsp;&nbsp;滁州 &nbsp;&nbsp;鄂尔多斯 &nbsp;&nbsp;邯郸 &nbsp;&nbsp;红河 &nbsp;&nbsp;湖州 &nbsp;&nbsp;济宁<br></ul>
+					<ul>汕头 &nbsp;&nbsp;上饶 &nbsp;&nbsp;韶关 &nbsp;&nbsp;泰安 &nbsp;&nbsp;泰州 &nbsp;&nbsp;乌海 &nbsp;&nbsp;乌鲁木齐 &nbsp;&nbsp;咸阳 &nbsp;&nbsp;湘潭<br></ul>
+					<ul>盐城 &nbsp;&nbsp;云浮 &nbsp;&nbsp;张家口</ul>
+					
+				</div></li>
+				<li id="shy">首页</li>
+				<li id="fl">分类</li>
+			</ul>
+			<div id="ss">
+				<i id="fdj"><img src="../images/fdj.png" alt=""></i>
+				<input type="text" placeholder="搜索明星.演出.体育赛事" id="inp">
+				<dd id="sous">
+					<p>搜索</p>
+				</dd>
+			</div>
+			<ul class="dl">
+				<a href="dl.html" style="color:rgb(2, 2, 2)"><li id="dl"><img src="../images/dl.png" alt="">登录</li></a>
+				<li id="xz"><img src="../images/xz.png" alt="">下载</li>
+				<li id="en"><img src="../images/en.png" alt="">English</li>
+			</ul>
+		</div>
+	</div>
+	<div class="b">
+		<div class="lbt w1200 cl">
+	<div id="slideShowContainer">
+			<ul id="picUl">
+				<li><a href="#"><img src="../images/1.jpg" alt=""/></a></li>
+				<li><a href="#"><img src="../images/2.jpg" alt=""/></a></li>
+				<li><a href="#"><img src="../images/3.jpg" alt=""/></a></li>
+				<li><a href="#"><img src="../images/4.jpg" alt=""/></a></li>
+			</ul>
+			<ul id="dotUl">
+				<li class="selected">1</li>
+				<li class="unselected">2</li>
+				<li class="unselected">3</li>
+				<li class="unselected">4</li>
+			</ul>
+			<div id="titleDiv">
+				<span class="show"><a href="#">原创爆笑贺岁舞台剧 疯狂双子星</a></span>
+				<span class="hide"><a href="#">现场看CBA上大麦体育</a></span>
+				<span class="hide"><a href="#">托马斯&朋友 舞台剧</a></span>
+				<span class="hide"><a href="#">TOM ODELL</a></span>
+			</div>
+		</div>
+		</div>
+	</div>
+	<a href="lb.html">
+	<div class="c">
+		<div class="ych w1200 cl">
+			<dl>
+				<h4>演唱会</h4>
+				<p class="ck">查看全部</p>
+			</dl>
+			<dl class="xa"><img src="../images/xa.jpg " height="340" width="258" alt="">
+				<div class="tmk">
+						<p class="ju">炬.2019演唱会 西安站</p>
+						<p class="mn">￥280起</p>
+				</div>
+			</dl>
+			<ul class="mp">
+				<li id="bt">
+						<div class="img">  <img src="../images/cqz.jpg" alt="">
+						</div>
+						<div class="info">
+						<p class="bt"> 2019陈绮贞20周年－「漫漫长夜 Cheer 20」北京演唱会</p>
+						<p class="dz">凯迪拉克中心</p>
+						<p class="rq">2019.06.22</p>
+						<p class="jg">￥399起</p>
+						</div>
+				</li>
+				<li>
+					<div class="img"><img src="../images/xs.jpg" alt=""></div>
+					<div class="info">
+					<p class="bt">2019咪咕音乐现场许嵩“1直在1起”深圳粉丝见面会</p>
+					<p class="dz">深圳蛇口风华大剧院</p>
+					<p class="rq">2019.05.11</p>
+					<p class="jg">￥280起</p>
+					</div>
+				</li>
+				<li>
+					<div class="img"><img src="../images/xkz.jpg" alt=""></div>
+					<div class="info">
+					<p class="bt">新裤子乐队“新浪潮”2019工体演唱会</p>
+					<p class="dz">北京工人体育馆</p>
+					<p class="rq">2019.03.23 </p>
+					<p class="jg">￥399起</p>
+				</div>
+				</li>
+				<li>
+					<div class="img"><img src="../images/zgr.jpg" alt=""></div>
+					<div class="info">
+						<p class="bt">共同渡过缅怀张国荣金曲演唱会-广州</p>
+						<p class="dz">广州中山纪念堂</p>
+						<p class="rq">2019.04.01</p>
+						<p class="jg">￥280起</p>
+					</div>
+				</li>
+				<li>
+					<div class="img"><img src="../images/gfc.jpg" alt=""></div>
+					<div class="info">
+					<p class="bt">郭富城“舞林密码”世界巡回演唱会2019—上海站</p>
+					<p class="dz">梅赛德斯-奔驰文化中心</p>
+					<p class="rq">2019.05.11</p>
+					<p class="jg">￥380起</p>
+				</div>
+				</li>
+				<li>
+					<div class="img"><img src="../images/mo.jpg" alt=""></div>
+					<div class="info">
+						<p class="bt">MØ 2019巡演北京站</p>
+						<p class="dz">糖果TANGO-雍和宫店三层</p>
+						<p class="rq">2019.06.22</p>
+						<p class="jg">￥380起</p>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class="c">
+			<div class="ych w1200 cl">
+				<dl>
+					<h4>话剧歌剧</h4>
+					<p class="ck">查看全部</p>
+				</dl>
+				<dl class="xa"><img src="../images/ydq.jpg " height="340" width="258" alt="">
+					<div class="tmk">
+							<p class="ju">林兆华作品 京味儿大戏《银锭桥》</p>
+							<p class="mn">￥80起</p>
+					</div>
+				</dl>
+				<ul class="mp">
+					<li>
+							<div class="img">  <img src="../images/dygw.jpg" alt="">
+							</div>
+							<div class="info">
+							<p class="bt">东野圭吾虐心悬疑舞台剧 《虚无的十字架》 锦辉传播出品</p>
+							<p class="dz">人民大舞台</p>
+							<p class="rq">2019.05.16-05.19</p>
+							<p class="jg">￥80起</p>
+							</div>
+					</li>
+					<li>
+						<div class="img"><img src="../images/jsj.jpg" alt=""></div>
+						<div class="info">
+						<p class="bt">许鞍华x张爱玲x王安忆x焦媛舞台力作《金锁记》</p>
+						<p class="dz">广州友谊剧院</p>
+						<p class="rq">2019.06.15-06.16</p>
+						<p class="jg">￥199起</p>
+						</div>
+					</li>
+					<li>
+						<div class="img"><img src="../images/cx.jpg" alt=""></div>
+						<div class="info">
+						<p class="bt">优秀戏剧进人大”之《除夕》明星版全国首演</p>
+						<p class="dz">中国人民大学如论讲堂</p>
+						<p class="rq">2019.04.04-04.07</p>
+						<p class="jg">￥40起</p>
+					</div>
+					</li>
+					<li>
+						<div class="img"><img src="../images/szx.jpg" alt=""></div>
+						<div class="info">
+							<p class="bt">开心麻花爆笑舞台剧《疯狂双子星》</p>
+							<p class="dz">江苏紫金大戏院</p>
+							<p class="rq">2019.04.11-04.14</p>
+							<p class="jg">￥80起</p>
+						</div>
+					</li>
+					<li>
+						<div class="img"><img src="../images/kxmh.jpg" alt=""></div>
+						<div class="info">
+						<p class="bt">开心麻花2019爆笑贺岁舞台剧广州站 《窗前不止明月光》</p>
+						<p class="dz">正佳开心麻花剧场</p>
+						<p class="rq">2019.03.15-03.17</p>
+						<p class="jg">￥180起</p>
+					</div>
+					</li>
+					<li>
+						<div class="img"><img src="../images/lc.jpg" alt=""></div>
+						<div class="info">
+							<p class="bt">开心麻花爆笑舞台剧《李茶的姑妈》第8轮-成都</p>
+							<p class="dz">四川歌舞大剧院</p>
+							<p class="rq">2019.04.19-04.21</p>
+							<p class="jg">￥100起</p>
+						</div>
+					</li>
+				</ul>
+			</div>
+	</div>
+	<div class="c">
+				<div class="ych w1200 cl">
+					<dl>
+						<h4>体育比赛</h4>
+						<p class="ck">查看全部</p>
+					</dl>
+					<dl class="xa"><img src="../images/nq.jpg " height="340" width="258" alt="">
+						<div class="tmk">
+								<p class="ju">2018-2019中国男子篮球职业联赛 北京首钢常规赛主场赛事</p>
+								<p class="mn">￥280起</p>
+						</div>
+					</dl>
+					<ul class="mp">
+						<li>
+								<div class="img">  <img src="../images/cqb.jpg" alt="">
+								</div>
+								<div class="info">
+								<p class="bt">IFDA世界传奇系列——2019传奇杯足球全明星中国赛</p>
+								<p class="dz"> IFDA世界传奇系列</p>
+								<p class="rq">2019.3.22-3.24</p>
+								<p class="jg">￥380起</p>
+								</div>
+						</li>
+						<li>
+							<div class="img"><img src="../images/ymq.jpg" alt=""></div>
+							<div class="info">
+							<p class="bt">2019年亚洲羽毛球锦标赛</p>
+							<p class="dz">武汉体育中心体育馆—沌口</p>
+							<p class="rq">2019.04.23-04.28</p>
+							<p class="jg">￥50起</p>
+							</div>
+						</li>
+						<li>
+							<div class="img"><img src="../images/zq1.jpg" alt=""></div>
+							<div class="info">
+							<p class="bt">2019中国足球协会超级联赛武汉卓尔主场赛事</p>
+							<p class="dz">武汉五环体育中心(东西湖体育中心)</p>
+							<p class="rq">2019赛季</p>
+							<p class="jg">￥480起</p>
+						</div>
+						</li>
+						<li>
+								<div class="img"><img src="../images/nq1.jpg" alt=""></div>
+								<div class="info">
+								<p class="bt">2018-2019赛季CBA上海哔哩哔哩篮球队主场比赛</p>
+								<p class="dz">上海哔哩哔哩篮球队主场比赛</p>
+								<p class="rq">2018.10.25-2019.3.13</p>
+								<p class="jg">￥100起</p>
+							</div>
+							</li>
+						<li>
+							<div class="img"><img src="../images/zg.jpg" alt=""></div>
+							<div class="info">
+							<p class="bt">2019 FORMULA1 中国大奖赛</p>
+							<p class="dz">上汽国际赛车场(上海国际赛车场)</p>
+							<p class="rq">2019.04.12-04.14</p>
+							<p class="jg">￥480起</p>
+						</div>
+						</li>
+						<li>
+							<div class="img"><img src="../images/sm.jpg" alt=""></div>
+							<div class="info">
+								<p class="bt">2019年中国 武汉速度赛马公开赛</p>
+								<p class="dz">武汉东方马城赛马场</p>
+								<p class="rq">2019.03.30 </p>
+								<p class="jg">￥25起</p>
+							</div>
+						</li>
+					</ul>
+				</div>
+	</div>
+	<div class="c">
+					<div class="ych w1200 cl">
+						<dl>
+							<h4>儿童亲子</h4>
+							<p class="ck">查看全部</p>
+						</dl>
+						<dl class="xa"><img src="../images/wwd.jpg " height="340" width="258" alt="">
+							<div class="tmk">
+									<p class="ju">美国原版音乐舞台剧《汪汪队立大功—救援先锋》（武汉站）</p>
+									<p class="mn">￥180起</p>
+							</div>
+						</dl>
+						<ul class="mp">
+							<li>
+									<div class="img">  <img src="../images/tms.jpg" alt="">
+									</div>
+									<div class="info">
+									<p class="bt"> 儿童剧《托马斯&朋友之迷失宝藏》武汉站</p>
+									<p class="dz">武汉琴台大剧院</p>
+									<p class="rq">2019.03.30 </p>
+									<p class="jg">￥100起</p>
+									</div>
+							</li>
+							<li>
+								<div class="img"><img src="../images/xz.jpg" alt=""></div>
+								<div class="info">
+								<p class="bt">佳能CP1300·2019英国正版引进《小猪佩奇舞台剧-Peppa Pig’s CELEBRATION》英文版</p>
+								<p class="dz">湖北剧院</p>
+								<p class="rq">2019.03.23-03.24</p>
+								<p class="jg">￥180起</p>
+								</div>
+							</li>
+							<li>
+								<div class="img"><img src="../images/xb.jpg" alt=""></div>
+								<div class="info">
+								<p class="bt">原创儿童剧《走，一起去寻宝》</p>
+								<p class="dz">武汉人民艺术剧院-亲子剧场</p>
+								<p class="rq">2019.03.09-04.14</p>
+								<p class="jg">￥50起</p>
+							</div>
+							</li>
+							<li>
+								<div class="img"><img src="../images/hd.jpg" alt=""></div>
+								<div class="info">
+									<p class="bt">海底小纵队5-深海探秘</p>
+									<p class="dz">武汉剧院</p>
+									<p class="rq">2019.05.04</p>
+									<p class="jg">￥80起</p>
+								</div>
+							</li>
+							<li>
+								<div class="img"><img src="../images/dw.jpg" alt=""></div>
+								<div class="info">
+								<p class="bt">沐澜文化・互动亲子剧《大卫，不可以》</p>
+								<p class="dz">湖北剧院</p>
+								<p class="rq">2019.06.08</p>
+								<p class="jg">￥80起</p>
+							</div>
+							</li>
+							<li>
+								<div class="img"><img src="../images/jz.jpg" alt=""></div>
+								<div class="info">
+									<p class="bt">宝艺文化-上海美术电影制片厂正版授权经典体验式儿童剧《黑猫警长之城市猎人》-武汉站</p>
+									<p class="dz">武汉剧院</p>
+									<p class="rq">2019.06.02</p>
+									<p class="jg">￥60起</p>
+								</div>
+							</li>
+						</ul>
+					</div>
+	</div>
+</a>
+		<!-- <div id="ele">
+		<div class="Pagination"></div>
+		</div> -->
+	<div class="d">
+			<div class="footer w1200 cl">
+				<ul class="gg">
+					<li>帮助中心</li>
+					<li>|</li>
+					<li>公司介绍</li>
+					<li>|</li>
+					<li >品牌识别</li>
+					<li>|</li>
+					<li>公司大事记</li>
+					<li>|</li>
+					<li>协议及隐私权政策</li>
+					<li>|</li>
+					<li >廉正举报</li>
+					<li>|</li>
+					<li>联系合作</li>
+					<li>|</li>
+					<li>招聘信息</li>
+					<li>|</li>
+					<li>防骗秘籍</li>
+				</ul>
+				<div class="dase">
+					<div class="dm"><img src="../images/dm.png" height="60" width="170" alt=""></div>
+					<dl class="app"><img src="../images/app.png " height="88" width="88" alt="">
+					<div class="xz">APP下载</div>
+					</dl>
+				</div>
+				<div class="side">
+					<div class="zx">
+					<div class="kef">在线客服</div>
+					</div>
+					<ul class="gs">
+						<li>京ICP证031057号</li>
+						<li>|</li>
+						<li>京ICP备11043884号</li>
+						<li>|</li>
+						<li>京公网安备11010102000430号</li>
+						<li>|</li>
+						<li>广播电视节目制作经营许可证
+							(京)字第02253号</li>
+						<li>网络文化经营许可证
+							京网文[2016]3438-413号</li>
+						<li>|</li>
+						<li>营业性演出许可证
+							京市演587号</li>
+						<li>北京红马传媒文化发展有限公司 版权所有
+							大麦网Copyright 2003-2018 All Rights Reserved
+						</li>
+					</ul>
+					<img src="../images/v.gif"  height="30" width="120" alt="">
+					<img src="../images/zz.png"  height="30" width="120" alt="">
+					<img src="../images/pc.png"  height="30" width="49" alt="">
+					<img src="../images/wx.png"  height="40" width="114" alt="">
+					<img src="../images/cx.png"  height="30" width="85" alt="">
+				</div>
+			</div>
+		</div>
+</body>
+<script src="../jq/jquery-1.11.3.js"></script>
+<script src="../js/lbt.js"></script>
+<script src="../js/seed.js"></script>
+<script src="../js/cookie.js"></script>
+<script>
+var dlDiv = document.getElementById("dl");
+    var loginName = getCookie("loginName");
+    if (loginName) {
+        dlDiv.innerHTML = `<span>${loginName}</span><div onclick="userExist()">退出</div>`;
+    } else {
+        dlDiv.innerHTML = `<img src="../images/dl.png" alt="">登录`;
+    }
+	function userExist() {
+        setCookie("loginName", "", -7);
+        setCookie("loginId", "", -7);
+        gotoLogin();
+    }
+
+    function gotoLogin() {
+        setCookie("backUrl", window.location.href, 7);
+        window.location.href = "dl.html";
+    }
+</script>
+
+
+</html>

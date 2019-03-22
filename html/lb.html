@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+	<link rel="stylesheet" href="../css/header.css">
+	<link rel="stylesheet" href="../css/footer.css">
+
+
+	<style>
+		body,h1,h2,h3,h4,h5,h6,p,ul,ol,dd,table,input,textarea{padding: 0;margin: 0;}
+		img{vertical-align: top;border: 0;}
+		a{text-decoration: none;}
+		li{list-style: none;}
+		input:focus,textarea:focus,select:focus{outline: none;}
+		textarea{resize:none;}
+		.w1170{width: 1170px;margin: auto;}
+		.cl:after{content: "";display: block;clear: both;height: 0;overflow: hidden;visibility: hidden;}
+		.cl{zoom: 1;}
+		body{background-color: #f3f3f3;}
+		.w1200{width: 1200px;margin: auto;}
+		.px{height: 1800px;border: 1px solid #eaeaea;}
+		.jg{background-color: #f5f1f183;width:650px;border: 1px solid #eaeaea;height: 45px;}
+		.jg{border-top:0;border-left:0;  }
+		.jg li{float: left;width: 150px;text-align: center;border-right: 1px solid #eaeaea;color: #666;line-height: 30px;}
+		#bh{border: 0;}
+		.tr{height:350px;border-bottom: 1px solid  #eaeaea34}
+		.tr img{float: left;width: 258px;height: 340px;float: left;}
+		.tr p{height: 50px;line-height: 50px;float: left;width: 900px;margin-top: 10px;margin-left: 10px;}
+		.tr span{height: 50px;line-height: 50px;width: 900px;}
+		#shownum{display: none;}
+		#btn {float: right;width: 82px;height: 48px;background-color: rgba(248, 73, 73, 0.884);border-top-right-radius: 20px;border-bottom-right-radius: 20px;}
+		#btn p {line-height: 48px;text-align: center;color: aliceblue;}
+		.px label{display: inline-block;width: 100px;height: 30px;background-color: #fff;text-align: center;line-height: 30px;}
+		.px input:checked + label{background-color:#eaeaea;}
+		.px input{ opacity: 0;}
+		p{color: #666}
+		.mz{color: black}
+		.good{color: crimson}
+
+		 /* #content {
+            width: 500px;
+            margin: 10px auto;
+            overflow: hidden;
+        }
+
+        #content ul {
+            width: 500px;
+            height: 30px;
+        }
+
+        #content ul li {
+            float: left;
+            width: 100px;
+            height: 30px;
+            text-align: center;
+            line-height: 30px;
+            background-color: black;
+            color: aliceblue;
+        } */
+	</style>
+</head>
+
+<body>
+	<div class="a">
+		<div class="header w1200 cl">
+		<a href="xm.html">	<img src="../images/logo.png" alt=""></a>
+			<i><img src="../images/db.png" alt=""></i>
+			<ul>
+				<li id="qg">全国 <div class="dzh">
+						<div class="qguo">当前城市： 全国</div>
+						<p class="rm">热门城市: &nbsp;&nbsp;&nbsp;全国 &nbsp;&nbsp;北京&nbsp;&nbsp; 上海&nbsp;&nbsp; 深圳 &nbsp;&nbsp;广州&nbsp;&nbsp;
+							杭州 &nbsp;&nbsp;天津&nbsp;&nbsp; 重庆&nbsp;&nbsp; 成都 &nbsp;&nbsp;香港</p>
+						<p>其他城市: &nbsp;&nbsp;&nbsp;上海 &nbsp;&nbsp;北京 &nbsp;&nbsp;深圳 &nbsp;&nbsp;武汉 &nbsp;&nbsp;杭州 &nbsp;&nbsp;成都
+							&nbsp;&nbsp;天津 &nbsp;&nbsp;广州 &nbsp;&nbsp;重庆 &nbsp;&nbsp;西安</p>
+						<ul>南京 &nbsp;&nbsp;苏州 &nbsp;&nbsp;宁波 &nbsp;&nbsp;贵阳 &nbsp;&nbsp;青岛 &nbsp;&nbsp;长沙 &nbsp;&nbsp;合肥 &nbsp;&nbsp;厦门
+							&nbsp;&nbsp;昆明 &nbsp;&nbsp;郑州 <br></ul>
+						<ul>济南 &nbsp;&nbsp;香港 &nbsp;&nbsp;石家庄 &nbsp;&nbsp;太原 &nbsp;&nbsp;福州 &nbsp;&nbsp;南宁 &nbsp;&nbsp;无锡 &nbsp;&nbsp;南昌
+							&nbsp;&nbsp;哈尔滨 &nbsp;&nbsp;宜昌<br></ul>
+						<ul>绍兴 &nbsp;&nbsp;大连 &nbsp;&nbsp;佛山 &nbsp;&nbsp;珠海 &nbsp;&nbsp;长春 &nbsp;&nbsp;潍坊 &nbsp;&nbsp;沈阳 &nbsp;&nbsp;常州
+							&nbsp;&nbsp;包头 &nbsp;&nbsp;呼和浩特<br></ul>
+						<ul>安庆 &nbsp;&nbsp;桂林 &nbsp;&nbsp;丽水 &nbsp;&nbsp;马鞍山 &nbsp;&nbsp;泉州 &nbsp;&nbsp;宜春 &nbsp;&nbsp;黄冈 &nbsp;&nbsp;廊坊
+							&nbsp;&nbsp;扬州 &nbsp;&nbsp;柳州<br></ul>
+						<ul>安顺 &nbsp;&nbsp;昌吉 &nbsp;&nbsp;长治 &nbsp;&nbsp;滁州 &nbsp;&nbsp;鄂尔多斯 &nbsp;&nbsp;邯郸 &nbsp;&nbsp;红河 &nbsp;&nbsp;湖州
+							&nbsp;&nbsp;济宁<br></ul>
+						<ul>汕头 &nbsp;&nbsp;上饶 &nbsp;&nbsp;韶关 &nbsp;&nbsp;泰安 &nbsp;&nbsp;泰州 &nbsp;&nbsp;乌海 &nbsp;&nbsp;乌鲁木齐 &nbsp;&nbsp;咸阳
+							&nbsp;&nbsp;湘潭<br></ul>
+						<ul>盐城 &nbsp;&nbsp;云浮 &nbsp;&nbsp;张家口</ul>
+					</div>
+				</li>
+				<li id="shy">首页</li>
+				<li id="fl">分类</li>
+			</ul>
+			<div id="ss">
+				<i id="fdj"><img src="../images/fdj.png" alt=""></i>
+				<input type="text" placeholder="搜索明星.演出.体育赛事" id="inp">
+				<dd id="btn">
+					<p>搜索</p>
+				</dd>
+			</div>
+			<ul class="dl">
+				<a href="dl.html" style="color:rgb(2, 2, 2)">
+					<li id="dl"><img src="../images/dl.png" alt="">登录</li>
+				</a>
+				<li id="xz"><img src="../images/xz.png" alt="">下载</li>
+				<li id="en"><img src="../images/en.png" alt="">English</li>
+			</ul>
+		</div>
+	</div>
+	<div id="header">
+		<!-- <input type="radio" name="order" value="id" checked>编号
+		<input type="radio" name="order" value="username">用户名
+		<input type="radio" name="paixu" value="asc" checked id="a">升序
+		<label for="a">12个月</label>
+		<input type="radio" name="paixu" value="desc" class="s" id="b">降序<br />
+		<label for="b">18个月</label> -->
+		<select id="shownum">
+			<option value="3">显示3条数据</option>
+			<option value="5">显示5条数据</option>
+			<option value="7">显示7条数据</option>
+		</select>
+		<!-- <button id="prev">上一页</button>
+				<button id="next">下一页</button> -->
+	</div>
+
+
+	<div class="px w1200 cl">
+			<ul class="jg">
+					<input type="radio" name="order" value="id" checked>综合排序
+					<input type="radio" name="paixu" value="asc" checked id="a">
+					<label for="a">推荐排序↑</label>
+					<input type="radio" name="paixu" value="desc" class="s" id="b">
+					<label for="b">推荐排序↓</label>
+						<li id="prev">上一页</li>
+						<li id="next">下一页</li>
+					</ul>
+		<div id="tbody">
+			<!-- <div class="tr">
+								<img src="../images/zg.jpg">
+								<p>
+									商品名称
+								</p>
+								<p>
+									999999
+								</p>
+								<p>99</p>
+								<p>11</p>
+							</div> -->
+		</div>
+
+		
+	</div>
+
+
+
+
+	<div class="d">
+		<div class="footer w1200 cl">
+			<ul class="gg">
+				<li>帮助中心</li>
+				<li>|</li>
+				<li>公司介绍</li>
+				<li>|</li>
+				<li>品牌识别</li>
+				<li>|</li>
+				<li>公司大事记</li>
+				<li>|</li>
+				<li>协议及隐私权政策</li>
+				<li>|</li>
+				<li>廉正举报</li>
+				<li>|</li>
+				<li>联系合作</li>
+				<li>|</li>
+				<li>招聘信息</li>
+				<li>|</li>
+				<li>防骗秘籍</li>
+			</ul>
+			<div class="dase">
+				<div class="dm"><img src="../images/dm.png" height="60" width="170" alt=""></div>
+				<dl class="app"><img src="../images/app.png " height="88" width="88" alt="">
+					<div class="xz">APP下载</div>
+				</dl>
+			</div>
+			<div class="side">
+				<div class="zx">
+					<div class="kef">在线客服</div>
+				</div>
+				<ul class="gs">
+					<li>京ICP证031057号</li>
+					<li>|</li>
+					<li>京ICP备11043884号</li>
+					<li>|</li>
+					<li>京公网安备11010102000430号</li>
+					<li>|</li>
+					<li>广播电视节目制作经营许可证
+						(京)字第02253号</li>
+					<li>网络文化经营许可证
+						京网文[2016]3438-413号</li>
+					<li>|</li>
+					<li>营业性演出许可证
+						京市演587号</li>
+					<li>北京红马传媒文化发展有限公司 版权所有
+						大麦网Copyright 2003-2018 All Rights Reserved
+					</li>
+				</ul>
+				<img src="../images/v.gif" height="30" width="120" alt="">
+				<img src="../images/zz.png" height="30" width="120" alt="">
+				<img src="../images/pc.png" height="30" width="49" alt="">
+				<img src="../images/wx.png" height="40" width="114" alt="">
+				<img src="../images/cx.png" height="30" width="85" alt="">
+			</div>
+		</div>
+	</div>
+
+
+</body>
+<script src="../js/ajax.js"></script>
+<script src="../js/cookie.js"></script>
+<script>
+
+var dlDiv = document.getElementById("dl");
+    var loginName = getCookie("loginName");
+    if (loginName) {
+        dlDiv.innerHTML = `<span>${loginName}</span><div onclick="userExist()">退出</div>`;
+    } else {
+        dlDiv.innerHTML = `<img src="../images/dl.png" alt="">登录`;
+    }
+	function userExist() {
+        setCookie("loginName", "", -7);
+        setCookie("loginId", "", -7);
+        gotoLogin();
+    }
+
+    function gotoLogin() {
+        setCookie("backUrl", window.location.href, 7);
+        window.location.href = "dl.html";
+    }
+
+
+
+	var key = "";
+	var order = "id";
+	var paixu = "asc";
+	var shownum = 5;
+	var pageIndex = 0;
+	//基本的数据设置
+
+	var tbody = document.getElementById("tbody");
+	var btn = document.getElementById("btn");
+	var inpInput = document.getElementById("inp");
+	var orderList = document.getElementsByName("order");
+	var paixuList = document.getElementsByName("paixu");
+	var shownumSelect = document.getElementById("shownum");
+	var prevBtn = document.getElementById("prev");
+	var nextBtn = document.getElementById("next");
+	//页面的按钮 都需要绑定事件
+
+	shownumSelect.onchange = function () {
+		shownum = this.value;
+		pageIndex = 0;
+		getData(key, order, paixu, shownum * pageIndex, shownum);
+	}
+	prevBtn.onclick = function () {
+		pageIndex--;
+		getData(key, order, paixu, shownum * pageIndex, shownum);
+	}
+	nextBtn.onclick = function () {
+		pageIndex++;
+		getData(key, order, paixu, shownum * pageIndex, shownum);
+	}
+
+
+
+
+	btn.onclick = function () {
+		key = inpInput.value;
+		pageIndex = 0; //四页 有第四页  但是每页显示7天 只有两页 
+		getData(key, order, paixu, shownum * pageIndex, shownum); //根据用户输入的条件  再次重新生成
+	}
+
+	for (var i = 0; i < orderList.length; i++) { //页面元素集合 不能使用数组的扩展方法 
+		orderList[i].onclick = function () {
+			order = this.value;
+			getData(key, order, paixu, shownum * pageIndex, shownum);
+		}
+	}
+
+	for (var i = 0; i < paixuList.length; i++) {
+		paixuList[i].onclick = function () {
+			paixu = this.value;
+			getData(key, order, paixu, shownum * pageIndex, shownum); //重新渲染数据
+		}
+	}
+	// nextBtn.onclick = function(){
+	//     // pageIndex++;
+	//     // getData();
+	//     //调用ajax获取总的页码数
+	//     ajax1();
+	//     ajax2();
+	// ajax(
+	// ajax();
+	// )
+	// }
+
+	getData(key, order, paixu, shownum * pageIndex, shownum);
+
+	function getData(key, order, paixu, skipnum, shownum) {
+
+		var xhr = new XMLHttpRequest();
+		xhr.open("get", `../php/list.php?key=${key}&order=${order}&paixu=${paixu}&skipnum=${skipnum}&shownum=${shownum}`,
+			true); //相对路径一用 就只能用服务来访问 写绝对的网络路径 处理跨域
+		xhr.send();
+		
+		xhr.onreadystatechange = function () {
+			if (xhr.readyState == 4 && xhr.status == 200) {
+				let result = xhr.responseText;
+				let list = JSON.parse(result); //获取该集合
+				var html = "";
+				list.forEach(function (item) {
+					var {
+						id,
+						goodsname,
+						goodsimg,
+						goodsnum,
+						date,
+						goodsprice
+					} = item;
+					html +=
+						` <div class="tr">
+                            <img src="${goodsimg}">
+                            <p class="mz">${goodsname}
+                            </p>
+                            <p>价格${(goodsprice)}</p>
+							  <p>地址:${goodsnum}</p>
+							  <p>时间:${date}</p>
+							 
+								 <p class="good" onclick='getgood("${goodsname}")'>查看详情</p>
+
+                            
+                         </div>`;
+				});
+				tbody.innerHTML = html;
+				//正常的数据显示
+				var req = new XMLHttpRequest();
+				req.open("get", `../php/countuserinfo.php?key=${key}`, true);
+				req.send();
+				req.onreadystatechange = function () {
+					if (req.readyState == 4 && req.status == 200) {
+						let result = req.responseText;
+						let obj = JSON.parse(result); //获取一共有多少条数据
+						let count = obj["count"];
+						let maxPageIndex = Math.ceil(count / shownum) - 1;
+						//10条数据 每页显示三条  页码从0开始  0  1  2 3
+						//9                                  0  1  2
+						prevBtn.disabled = false;
+						prevBtn.onclick = function () {
+							prevBtn.disabled = true;
+							pageIndex--;
+							getData(key, order, paixu, shownum * pageIndex, shownum);
+						}
+						nextBtn.disabled = false;
+						nextBtn.onclick = function () {
+							nextBtn.disabled = true;
+							pageIndex++;
+							getData(key, order, paixu, shownum * pageIndex, shownum);
+						}
+						//先都绑定  不满足条件就移除
+						if (pageIndex == 0) {
+							prevBtn.onclick = null;
+							prevBtn.disabled = true;
+						}
+						if (pageIndex == maxPageIndex) {
+							nextBtn.onclick = null;
+							nextBtn.disabled = true;
+						}
+					}
+
+				}
+
+			}
+		}
+	}
+
+function getgood(ele) {
+        window.location.href = "sq.html"
+        setCookie("goodsname", ele, 7);}
+
+
+		  function gotoLogin() {
+        setCookie("backUrl", window.location.href, 7);
+        window.location.href = "dl.html";
+        // window.location.href = "login.html?backurl="+window.location.href;
+    }
+
+    function userExist() {
+        setCookie("loginId", "", -1);
+        setCookie("loginName", "", -1);
+        gotoLogin();
+    }
+	
+
+
+
+	// var content = document.getElementById("content");
+	//  $.ajax({
+	//         type: "get",
+	//         url: "../php/goodslist.php", //java aspx  asp py
+	//         dataType: "json",
+	//         success: function (list) { //list是一个集合
+	//             var html = "";
+	//             list.forEach(function (item) {
+	//                 var {
+	//                     id,
+	//                     goodsname,
+	//                     goodsimg,
+	//                     goodsnum,
+	//                     goodsprice
+	//                 } = item;
+	//                 html +=
+	//                     ` <div class="tr">
+	//                             <img src="${goodsimg}">
+	//                             <p>${goodsname}
+	//                             </p>
+	//                             <p>价格${(goodsprice)}</p>
+	//                               <p>地址:${goodsnum}</p>
+	//                                <p> <span class='buy' onclick="gotomyshoppingcar('${id}')">立即购买</span>
+	//                             </p>
+	//                          </div>`;
+	//             });
+	//             content.innerHTML = html;
+
+	//         },
+	//         error: function (info) {
+	//             console.log(info);
+	//         }
+	// 	});
+</script>
+
+</html>

@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+	<link rel="stylesheet" href="../css/header.css">
+	<link rel="stylesheet" href="../css/footer.css">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        #shoppingcar{
+            width: 1160px;
+            height: 600px;
+          margin:20px auto;
+            overflow: hidden;
+        }
+        #shoppingcar .th{
+            width: 1150px;
+			height: 50px;
+			margin-left: 10px;
+            
+        }
+        .th  span{
+            float: left;
+            width: 160px;
+            height: 80px;
+			text-align: center;
+			overflow: hidden;
+            line-height: 80px;
+            /* background-color:rgba(255, 255, 255, 0.658); */
+            color: #3c3c3c;
+        }
+        #tbody{
+            width: 1150px;
+			overflow: hidden;
+			margin-left: 10px;
+			border: 1px solid #ccc;
+			box-sizing:border-box;
+			
+        }
+        #tbody .tr{
+            width: 1150px;
+			height: 30px;
+			
+        }
+        .tr>span{
+            float: left;
+            width: 160px;
+            height: 80px;
+			text-align: center;
+			overflow: hidden;
+            line-height: 80px;
+            /* background-color:#999; */
+			color: #3c3c3c;
+        }
+        .tr span input{
+            width: 50px;
+            text-align: center;
+        }
+        .tr span img{
+		   width: 60px;
+		   height: 60px;
+		   margin-top: 10px;
+		}
+		
+
+		.foot{margin-top:0px;color:#666;height:48px;border:1px solid #c8c8c8;border-top:0;background-color:#eaeaea;background-image:linear-gradient(RGB(241,241,241),RGB(226,226,226));position:relative;z-index:8;}
+.foot div, .foot a{line-height:48px;height:48px;}
+.foot .select-all{width:80px;height:48px;line-height:48px;color:#666;text-align:center;}
+.foot .delete{padding-left:10px;}
+.foot .closing{border-left:1px solid #c8c8c8;width:103px;text-align:center;color:#666;font-weight:bold;cursor:pointer;background-image:linear-gradient(RGB(241,241,241),RGB(226,226,226));}
+.foot .closing:hover{background-image:linear-gradient(RGB(226,226,226),RGB(241,241,241));color:#333;}
+.foot .total{margin:0 20px;cursor:pointer;}
+.foot  #priceTotal, .foot #selectedTotal{color:red;font-family:"Microsoft Yahei";font-weight:bold;}
+.foot .selected{cursor:pointer;}
+.foot .selected .arrow{position:relative;top:-3px;margin-left:3px;}
+.foot .selected .down{position:relative;top:3px;display:none;}
+.show .selected .down{display:inline;}
+.show .selected .up{display:none;}
+.foot .selected:hover .arrow{color:red;}
+.foot .selected-view{width:938px;border:1px solid #c8c8c8;position:absolute;height:auto;background:#ffffff;z-index:9;bottom:48px;left:-1px;display:none;}
+.show .selected-view{display:block;}
+.foot .selected-view div{height:auto;}
+.foot .selected-view .arrow{font-size:16px;line-height:100%;color:#c8c8c8;position:absolute;right:330px;bottom:-9px;}
+.foot .selected-view .arrow span{color:#ffffff;position:absolute;left:0px;bottom:1px;}
+
+#selectedViewList{padding:10px 20px 10px 20px;}
+#selectedViewList div{display:inline-block;position:relative;width:100px;height:80px;border:1px solid #ccc;margin:10px;float:left;}
+#selectedViewList div img{width:100px;height:80px;margin-right:10px;float:left;}
+#selectedViewList div span{display:none;color:#ffffff;font-size:12px;position:absolute;top:0px;right:0px;width:60px;height:18px;line-height:18px;text-align:center;background:#000;cursor:pointer;}
+#selectedViewList div:hover span{display:block;}
+#foot{width: 1150px;margin-left: 10px;}
+.closing{float: right;}
+.total{float: right;margin-right: 50px;}
+.selected{float: right;margin-right: 100px;}
+    </style>
+</head>
+
+<body>
+		<div class="a">
+				<div class="header w1200 cl">
+						<a href="xm.html">	<img src="../images/logo.png" alt=""></a>
+					<i><img src="../images/db.png" alt=""></i>
+					<ul>
+						<li id="qg">全国	<div class="dzh">
+							<div class="qguo">当前城市：       全国</div>
+							<p class="rm">热门城市: &nbsp;&nbsp;&nbsp;全国 &nbsp;&nbsp;北京&nbsp;&nbsp; 上海&nbsp;&nbsp; 深圳 &nbsp;&nbsp;广州&nbsp;&nbsp; 杭州 &nbsp;&nbsp;天津&nbsp;&nbsp; 重庆&nbsp;&nbsp; 成都 &nbsp;&nbsp;香港</p>
+							<p>其他城市: &nbsp;&nbsp;&nbsp;上海 &nbsp;&nbsp;北京 &nbsp;&nbsp;深圳 &nbsp;&nbsp;武汉 &nbsp;&nbsp;杭州 &nbsp;&nbsp;成都 &nbsp;&nbsp;天津 &nbsp;&nbsp;广州 &nbsp;&nbsp;重庆 &nbsp;&nbsp;西安</p>
+							<ul>南京 &nbsp;&nbsp;苏州 &nbsp;&nbsp;宁波 &nbsp;&nbsp;贵阳 &nbsp;&nbsp;青岛 &nbsp;&nbsp;长沙 &nbsp;&nbsp;合肥 &nbsp;&nbsp;厦门 &nbsp;&nbsp;昆明 &nbsp;&nbsp;郑州 <br></ul>
+							<ul>济南 &nbsp;&nbsp;香港 &nbsp;&nbsp;石家庄 &nbsp;&nbsp;太原 &nbsp;&nbsp;福州 &nbsp;&nbsp;南宁 &nbsp;&nbsp;无锡 &nbsp;&nbsp;南昌 &nbsp;&nbsp;哈尔滨 &nbsp;&nbsp;宜昌<br></ul>
+							<ul>绍兴 &nbsp;&nbsp;大连 &nbsp;&nbsp;佛山 &nbsp;&nbsp;珠海 &nbsp;&nbsp;长春 &nbsp;&nbsp;潍坊 &nbsp;&nbsp;沈阳 &nbsp;&nbsp;常州 &nbsp;&nbsp;包头 &nbsp;&nbsp;呼和浩特<br></ul>
+							<ul>安庆 &nbsp;&nbsp;桂林 &nbsp;&nbsp;丽水 &nbsp;&nbsp;马鞍山 &nbsp;&nbsp;泉州 &nbsp;&nbsp;宜春 &nbsp;&nbsp;黄冈 &nbsp;&nbsp;廊坊 &nbsp;&nbsp;扬州 &nbsp;&nbsp;柳州<br></ul>
+							<ul>安顺 &nbsp;&nbsp;昌吉 &nbsp;&nbsp;长治 &nbsp;&nbsp;滁州 &nbsp;&nbsp;鄂尔多斯 &nbsp;&nbsp;邯郸 &nbsp;&nbsp;红河 &nbsp;&nbsp;湖州 &nbsp;&nbsp;济宁<br></ul>
+							<ul>汕头 &nbsp;&nbsp;上饶 &nbsp;&nbsp;韶关 &nbsp;&nbsp;泰安 &nbsp;&nbsp;泰州 &nbsp;&nbsp;乌海 &nbsp;&nbsp;乌鲁木齐 &nbsp;&nbsp;咸阳 &nbsp;&nbsp;湘潭<br></ul>
+							<ul>盐城 &nbsp;&nbsp;云浮 &nbsp;&nbsp;张家口</ul>
+							
+						</div></li>
+						<li id="shy">首页</li>
+						<li id="fl">分类</li>
+					</ul>
+					<div id="ss">
+						<i id="fdj"><img src="../images/fdj.png" alt=""></i>
+						<input type="text" placeholder="搜索明星.演出.体育赛事" id="inp">
+						<dd id="sous">
+							<p>搜索</p>
+						</dd>
+					</div>
+					<ul class="dl">
+						<a href="dl.html" style="color:rgb(2, 2, 2)"><li id="dl"><img src="../images/dl.png" alt="">登录</li></a>
+						<li id="xz"><img src="../images/xz.png" alt="">下载</li>
+						<li id="en"><img src="../images/en.png" alt="">English</li>
+					</ul>
+				</div>
+			</div>
+
+
+    <div id="shoppingcar">
+        <div class="th">
+            <span><input type="checkbox" class="check-all">全选</span>
+            <span>商品名称</span>
+            <span>图片</span>
+            <span>单价</span>
+            <span>数量</span>
+            <span>总价</span>
+            <span>操作</span>
+        </div>
+        <div id="tbody">
+            <!-- <div class="tr">
+                <span><input type="checkbox" class="check-one"></span>
+                <span>商品名称</span>
+                <span>图片</span>
+                <span>单价</span>
+                <span>数量</span>
+                <span>总价</span>
+                <span>删除</span>
+            </div> -->
+        </div>
+
+		<div class="foot" id="foot">
+				<label class="fl select-all"><input type="checkbox" class="check-all check"/>&nbsp;&nbsp;全选</label>
+				<a class="fl delete" id="deleteAll" href="javascript:;">删除</a>
+				<div class="fr closing" onclick="getTotal();">结 算</div>
+				<input type="hidden" id="cartTotalPrice" />
+				<div class="fr total">合计：￥<span id="priceTotal">0.00</span></div>
+				<div class="fr selected" id="selected">已选商品<span id="selectedTotal">0</span>件<span class="arrow up">︽</span><span class="arrow down">︾</span></div>
+				<div class="selected-view">
+					<div id="selectedViewList" class="clearfix">
+						<div><span>取消选择</span></div>
+					</div>
+					<span class="arrow">◆<span>◆</span></span>
+				</div>
+			</div>
+
+	</div>
+
+	
+
+	<div class="d">
+		<div class="footer w1200 cl">
+			<ul class="gg">
+				<li>帮助中心</li>
+				<li>|</li>
+				<li>公司介绍</li>
+				<li>|</li>
+				<li>品牌识别</li>
+				<li>|</li>
+				<li>公司大事记</li>
+				<li>|</li>
+				<li>协议及隐私权政策</li>
+				<li>|</li>
+				<li>廉正举报</li>
+				<li>|</li>
+				<li>联系合作</li>
+				<li>|</li>
+				<li>招聘信息</li>
+				<li>|</li>
+				<li>防骗秘籍</li>
+			</ul>
+			<div class="dase">
+				<div class="dm"><img src="../images/dm.png" height="60" width="170" alt=""></div>
+				<dl class="app"><img src="../images/app.png " height="88" width="88" alt="">
+					<div class="xz">APP下载</div>
+				</dl>
+			</div>
+			<div class="side">
+				<div class="zx">
+					<div class="kef">在线客服</div>
+				</div>
+				<ul class="gs">
+					<li>京ICP证031057号</li>
+					<li>|</li>
+					<li>京ICP备11043884号</li>
+					<li>|</li>
+					<li>京公网安备11010102000430号</li>
+					<li>|</li>
+					<li>广播电视节目制作经营许可证
+						(京)字第02253号</li>
+					<li>网络文化经营许可证
+						京网文[2016]3438-413号</li>
+					<li>|</li>
+					<li>营业性演出许可证
+						京市演587号</li>
+					<li>北京红马传媒文化发展有限公司 版权所有
+						大麦网Copyright 2003-2018 All Rights Reserved
+					</li>
+				</ul>
+				<img src="../images/v.gif" height="30" width="120" alt="">
+				<img src="../images/zz.png" height="30" width="120" alt="">
+				<img src="../images/pc.png" height="30" width="49" alt="">
+				<img src="../images/wx.png" height="40" width="114" alt="">
+				<img src="../images/cx.png" height="30" width="85" alt="">
+			</div>
+		</div>
+	</div>
+</body>
+<script src="../js/ajax.js"></script>
+<script src="../js/cookie.js"></script>
+<script src="../jq/jquery-1.11.3.js"></script>
+<script>
+//    $(function(){
+//             //全选 只是针对全选
+//             $(".check-all").click(function(){
+//                $(".check-one").prop("checked",this.checked);
+				
+//             });
+            
+//         });
+
+//   $(function(){
+//                 $('input').click(function(){
+//                     if($(this).index() == 0){
+//                         //判断当前全选框是否选中，如果选中则全选，否则全不选
+//                         if($('input').eq(0).prop('checked')){
+//                             $(this).nextAll().prop('checked',true);
+//                         }else{
+//                             $(this).nextAll().prop('checked',false);
+//                         }
+//                     }else{
+//                         //判断除了全选之外的选项是否全部选中，选中则勾上全选，否则全不选
+//                         if($('input:gt(0):checked').length == $('input').length-1){
+//                             $('input').eq(0).prop('checked',true)
+//                         }else{
+//                             $('input').eq(0).prop('checked',false)
+//                         }
+//                     }  
+//                 })
+//             })
+
+
+
+	var dlDiv = document.getElementById("dl");
+    var loginName = getCookie("loginName");
+    if (loginName) {
+        dlDiv.innerHTML = `<span>${loginName}</span><div onclick="userExist()">退出</div>`;
+    } else {
+        dlDiv.innerHTML = `<img src="../images/dl.png" alt="">登录`;
+    }
+	function userExist() {
+        setCookie("loginName", "", -7);
+        setCookie("loginId", "", -7);
+        gotoLogin();
+    }
+
+    function gotoLogin() {
+        setCookie("backUrl", window.location.href, 7);
+        window.location.href = "dl.html";
+	}
+	
+    var tbody = document.getElementById("tbody");
+    var loginId = getCookie("loginId");
+    if (loginId) {
+        $.ajax({
+            type: "get",
+            url: "../php/myshoppingcarlist.php",
+            data: {
+                userid: loginId
+            },
+            dataType: "json",
+            success: function (list) {
+                var html = "";
+                list.forEach(function (item) {
+                    var {
+                        id,
+                        goodsid,
+                        goodsimg,
+                        goodsprice,
+                        goodsname,
+                        num
+                    } = item;
+                    html +=
+                        ` <div class="tr">
+                                    <span><input type="checkbox" class="check-one"></span>
+                                    <span>${goodsname}</span>
+                                    <span><img src="${goodsimg}"></span>
+                                    <span class="subtotal">${(goodsprice*1).toFixed(2)}</span>
+                                    <span>
+                                        <span class="reduce" onclick="reduceNum('${goodsid}',this)">${num>1?"-":"&nbsp;"}</span>
+                                        <input class="count-input" value="${num}">
+                                         <span class="add" onclick="addNum('${goodsid}',this)">+</span>
+
+                                    </span>
+                                    <span>${(goodsprice*num).toFixed(2)}</span>
+                                    <span onclick="window.delUserById('${id}',this)">删除</span>
+                             </div>`;
+                });
+                tbody.innerHTML = html;
+
+                // {
+                // id: "4",
+                // goodsid: "2",
+                // goodsimg: "images/2.jpg",
+                // goodsprice: "101",
+                // goodsname: "商品2",
+                // num: "1"
+                // }
+
+            }
+
+        });
+    } else { //没有登录 就跳转到登陆页面 登陆成功以后 在返回
+        gotoLogin();
+    }
+
+    function addNum(goodsid, addBtn) {
+
+        addBtn.onclick = null;
+        $.ajax({
+            type: "get",
+            url: "../php/gotomyshoppincar.php",
+            data: {
+                userid: loginId,
+                goodsid: goodsid,
+                num: 1
+            },
+            dataType: "json",
+            success: function (obj) {
+                if (obj["code"] == 1) { //数据更新成功
+                    var countInput = addBtn.previousElementSibling;
+                    countInput.value = countInput.value * 1 + 1;
+                    var reduceSpan = countInput.previousElementSibling;
+                    reduceSpan.innerHTML = "-";
+                    addBtn.goodsid = goodsid;
+                    addBtn.onclick = function () {
+                        addNum(this.goodsid, this);
+                    }
+                    var reduceBtn = countInput.previousElementSibling;
+                    reduceBtn.goodsid = goodsid;
+                    reduceBtn.onclick = function () {
+                        reduceNum(this.goodsid, this);
+                    }
+
+                    // addBtn.onclick  = addNum(this.goodsid,this); 这么写直接调用
+
+
+                } else {
+                    alert(obj["msg"]);
+                }
+
+            }
+
+        });
+
+
+    }
+
+
+    function reduceNum(goodsid, reduceBtn) {
+
+        var countInput = reduceBtn.nextElementSibling;
+        var countNum = countInput.value;
+        if (countNum == 1) {
+            return false;
+        }
+        $.ajax({
+            type: "get",
+            url: "../php/gotomyshoppincar.php",
+            data: {
+                userid: loginId,
+                goodsid: goodsid,
+                num: -1
+            },
+            dataType: "json",
+            success: function (obj) {
+                if (obj["code"] == 1) { //数据更新成功
+                    countInput.value = countInput.value - 1;
+                    if (countInput.value == 1) {
+                        reduceBtn.innerHTML = "";
+                        reduceBtn.onclick = null;
+                    } else {
+                        reduceBtn.goodsid = goodsid;
+                        reduceBtn.onclick = function () {
+                            reduceNum(this.goodsid, this);
+                        }
+                    }
+                } else {
+                    alert(obj["msg"]);
+                }
+
+            }
+
+        });
+
+
+    }
+
+    function gotoLogin() {
+        setCookie("backUrl", window.location.href, 7);
+        window.location.href = "login.html";
+        // window.location.href = "login.html?backurl="+window.location.href;
+    }
+
+    function delUserById(id, li) {
+        if (confirm("你确定要删除我吗?")) {
+            var xhr = new XMLHttpRequest();
+            xhr.open("get", `../php/deluserbyid.php?id=${id}`, true);
+            xhr.send();
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState == 4 && xhr.status == 200) {
+                    let result = xhr.responseText;
+                    let obj = JSON.parse(result);
+                    if (obj["code"] == 1) {
+                        // window.location.reload();
+                        // alert(that);
+                        li.parentNode.remove();
+
+                    } else {
+                        alert(obj["msg"]);
+                    }
+
+                }
+            }
+
+        }
+
+	}
+	
+
+
+
+	 var checkAllList = document.getElementsByClassName("check-all");
+    var checkOneList = document.getElementsByClassName("check-one");
+    var addList = document.getElementsByClassName("add");
+    var reduceList = document.getElementsByClassName("reduce");
+    var deleteList = document.getElementsByClassName("delete");
+    var selectedTotal = document.getElementById("selectedTotal");
+    var priceTotal = document.getElementById("priceTotal");
+    var count = 0;
+
+    for (var i = 0; i < checkAllList.length; i++) {
+        var checkAll = checkAllList[i];
+        checkAll.onclick = function() {
+            var flag = this.checked;
+            if (flag) {
+                count = checkOneList.length;
+            } else {
+                count = 0;
+            }
+            for (var j = 0; j < checkAllList.length; j++) {
+                // console.log(checkAllList[j])
+                checkAllList[j].checked = flag;
+            }
+            for (var j = 0; j < checkOneList.length; j++) {
+                checkOneList[j].checked = flag;
+            }
+            getTotal();
+        }
+    }
+
+    for (var i = 0; i < checkOneList.length; i++) {
+        var checkOne = checkOneList[i];
+        checkOne.onclick = function() {
+            if (this.checked) {
+                count++;
+            } else {
+                count--;
+            }
+            console.log(count, checkOneList.length)
+            if (count == checkOneList.length) {
+                for (var j = 0; j < checkAllList.length; j++) {
+                    checkAllList[j].checked = true;
+                }
+            } else {
+                for (var j = 0; j < checkAllList.length; j++) {
+                    checkAllList[j].checked = false;
+                }
+            }
+            getTotal()
+        }
+
+    }
+
+    // addBtn
+    for (var i = 0; i < addList.length; i++) {
+        var addBtn = addList[i];
+        addBtn.onclick = function() {
+            var prevEle = prev(this);
+            console.log(prevEle);
+            prevEle.value++;
+            if (prevEle.value > 1) {
+                var reduceBtn = prev(prevEle);
+                reduceBtn.innerHTML = "-";
+            }
+            var parent = this.parentNode;
+            var price = prev(parent).innerHTML;
+            var subtotal = next(this.parentNode);
+            subtotal.innerHTML = (price * prevEle.value).toFixed(2);
+            getTotal()
+        }
+    }
+
+    // reduce
+    for (var i = 0; i < reduceList.length; i++) {
+        var reduce = reduceList[i];
+        reduce.onclick = function() {
+            var numInp = next(this);
+            if (numInp.value == 1) {
+                return false;
+            }
+            numInp.value--;
+            if (numInp.value == 1) {
+                this.innerHTML = "";
+            }
+
+            var parent = this.parentNode;
+            var price = prev(parent).innerHTML;
+            var subTotal = next(parent);
+            subTotal.innerHTML = (price * numInp.value).toFixed(2);
+            getTotal()
+        }
+    }
+
+    // delete
+    for (var i = 0; i < deleteList.length; i++) {
+        if (i != deleteList.length - 1) {
+            // deleteOne
+            var deleteOne = deleteList[i];
+            deleteOne.onclick = function() {
+                var parents = this.parentNode.parentNode;
+                parents.remove();
+                getTotal()
+            }
+        } else {
+            // deleteAll
+            var deleteAll = deleteList[i];
+            deleteAll.onclick = function() {
+                for (var j = 0; j < checkOneList.length; j++) {
+                    if (checkOneList[j].checked) {
+                        var tr = checkOneList[j].parentNode.parentNode;
+                        tr.remove();
+                        j--;
+                    }
+                }
+                getTotal()
+            }
+        }
+    }
+    //     0 1 2 3
+    // // [2,4];
+
+    function getTotal() {
+        var allnum = 0;
+        var allPrice = 0;
+        for (var i = 0; i < checkOneList.length; i++) {
+            if (checkOneList[i].checked) {
+                var tr = checkOneList[i].parentNode.parentElement;
+                var num = tr.getElementsByClassName("count-input")[0].value * 1;
+                var subTotal = tr.getElementsByClassName("subtotal")[0].innerHTML * 1;
+                console.log(num, subTotal)
+                allnum += num;
+                allPrice += subTotal;
+            }
+        }
+        selectedTotal.innerHTML = allnum;
+        priceTotal.innerHTML = allPrice.toFixed(2);
+    }
+
+
+
+
+
+
+    function prev(ele) {
+        if (ele.previousElementSibling) {
+            return ele.previousElementSibling;
+        }
+        return ele.previousSibling;
+    }
+
+    function next(ele) {
+        if (ele.nextElementSibling) {
+            return ele.nextElementSibling;
+        }
+        return ele.nextSibling;
+    }
+</script>
+
+</html>
